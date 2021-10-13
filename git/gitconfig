@@ -1,0 +1,40 @@
+[user]
+	email = CHANGEIT
+        name = CHANGEIT
+[push]
+	default = simple
+ 
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	lg = log -p
+	lol = log --pretty=format:'%C(yellow)%h %C(red)%ad %C(blue)%an%C(green)%d %C(reset)%s' --date=format:'%Y-%m-%d %H:%M:%S' --graph
+	lola = log --pretty=format:'%C(yellow)%h %C(red)%ad %C(blue)%an%C(green)%d %C(reset)%s' --date=format:'%Y-%m-%d %H:%M:%S' --graph --all
+	ls = ls-files
+        pf = push --force-with-lease
+        pr = pull --rebase
+        aca = !git add -A && git commit --amend --no-edit
+
+        # show conflicted files
+        conflicts = diff --name-only --diff-filter=U
+	# Show files ignored by git:
+	ignored = ls-files -o -i --exclude-standard
+ 
+[color]
+	ui = auto
+	
+[core]
+	autocrlf = input
+	eol=lf
+	longpaths=true
+    editor=vim
+
+[rerere]
+	enabled = true
+
+[credential]
+    helper=cache --timeout=3600

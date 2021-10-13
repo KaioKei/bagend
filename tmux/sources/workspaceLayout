@@ -1,0 +1,4 @@
+selectp -t 0 #select the first pane and start nvim inside
+send-keys 'nvim' C-m #start neovim
+splitw -v -p 30 #split it into two halves
+selectp -t 0 #go back to the first pane
