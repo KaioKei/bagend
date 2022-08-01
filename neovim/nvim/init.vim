@@ -1,4 +1,3 @@
-
 "
 " PLUGINS
 "
@@ -66,7 +65,7 @@ nnoremap <C-T> :NERDTreeToggle <CR> :TagbarToggle <CR>
 " Alt-P : Open markdown preview
 " Alt-p : Close markdown preview
 nmap <silent> <A-P> <Plug>MarkdownPreview
-nmap <silent> <A-p> <Plug>StopMarkdownPreview
+nmap <silent> <A-p> <Plug>MarkdownPreviewStop
 " Alt-T : Create table of contents at the cursor location
 nnoremap <A-T> :GenTocGitLab <CR>
 
