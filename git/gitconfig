@@ -1,6 +1,6 @@
 [user]
-	email = CHANGEIT
-        name = CHANGEIT
+	email = louis.cailliot@thalesgroup.com
+        name = louis.cailliot
 [push]
 	default = simple
  
@@ -37,4 +37,5 @@
 	enabled = true
 
 [credential]
-    helper=cache --timeout=3600
+    # 4h cache
+    helper=cache --timeout=14440
