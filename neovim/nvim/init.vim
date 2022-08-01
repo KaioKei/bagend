@@ -83,7 +83,9 @@ inoremap hh <C-V><Tab>
 "
 " GLOBAL SETTINGS
 " 
-
+"Set shell with bash for vim only
+"Without this option, switching from vim to fish shell is very slow
+set shell=/bin/bash\ -i
 "No compatibility with VI
 set nocompatible
 "Fix crusor bug characters

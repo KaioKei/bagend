@@ -1,0 +1,31 @@
+# Work Layout
+# DOC 
+# with nvim and small terminal
+new-session
+rename-window doc
+selectp -t 0 #select the first pane
+send-keys 'nvim' C-m #start neovim
+splitw -v -p 30 #split it into two panes of 70/30% ratio
+
+# OP
+# with two terminals
+new-window
+rename-window op
+selectp -t 0 #select the first pane
+splitw -v #split it into two halves
+
+# MICRO TASKS
+# Split session into FOUR EQUAL quadrants
+new-window
+rename-window micro
+selectp -t 0    # select the first (0) pane
+splitw -h -p 50 # split it into two halves
+selectp -t 0    # select the first (0) pane
+splitw -v -p 50 # split it into two halves
+selectp -t 2    # select the new, second (2) pane
+splitw -v -p 50 # split it into two halves
+selectp -t 0    # go back to the first pane
+
+# back to op window
+selectw -t 1
+
