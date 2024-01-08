@@ -2,9 +2,6 @@
 
 Neovim is a refactor, and sometimes redactor, in the tradition of Vim (which itself derives from Stevie). It is not a rewrite but a continuation and extension of Vim for users who want the good parts of Vim, and more.
 
-For more details than this tutorial follow :
-* [https://github.com/neovim/neovim/wiki/Installing-Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-
 ## REQUIREMENTS
 
 For `TagBar` Plugin :
@@ -22,16 +19,14 @@ pip install pynvim jedi
 
 ## INSTALL
 
-```sh
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get install neovim
-```
+* [https://github.com/neovim/neovim/wiki/Installing-Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ## CONFIGURE
 
 
 ```sh
-cp -r nvim/ ~/.config
+set NVIM $(realpath nvim/)
+ln -s $NVIM ~/.config/nvim
 ```
 
 Run `nvim` and install neovim plugins :

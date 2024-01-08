@@ -1,12 +1,30 @@
 [user]
 	email = louis.cailliot@thalesgroup.com
-        name = louis.cailliot
+        name = Louis Cailliot
+        # use the following key to sign commits
+        signingKey = /home/kaio/.ssh/git_id_ed25519
+        #signingkey = E0D5F9F7511F29E8
+
+[gpg]
+  # gpg key format uses ssh keys
+  format = ssh
+
+[gpg "ssh"]
+  allowedSignersFile = /home/kaio/.ssh/allowed_signers
+
+[commit]
+  # auto-sign all commits
+  gpgsign = true
+
+[tag]
+  gpgsign = true
+ 
 [push]
 	default = simple
- 
+
 [alias]
 	st = status
-	ci = commit
+	cs = commit -S -s
 	br = branch
 	co = checkout
 	df = diff
@@ -31,11 +49,14 @@
 	autocrlf = input
 	eol=lf
 	longpaths=true
-    editor=vim
+        editor=nvim
 
 [rerere]
 	enabled = true
+        autoupdate = true
 
 [credential]
     # 4h cache
     helper=cache --timeout=14440
+
+

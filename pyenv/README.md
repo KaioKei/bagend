@@ -1,35 +1,23 @@
 # PYENV
 
+## Requirements
+
+* build-essential
+* pip
+
 ## INSTALL
 
-```sh
-cd ~/Downloads
-curl https://pyenv.run | bash
-pyenv update
-```
+* [Pyenv installation documentation](https://github.com/pyenv/pyenv#getting-pyenv)
 
 ## CONFIGURE
 
-For `fish` :
+For fish :
 
-```sh
-cat conf/pyenv.fish >> $HOME/.config/fish/config.fish
-source $HOME/.config/fish/config.fish
-```
-
-
-## TIPS
-
-Install a python version :
-
-```sh
-# install a python version
-pyenv install 3.8.12
-# create a python environment with this version
-pyenv virtualenv 3.8.12 myenv
-# activate the environment
-pyenv activate myenv
-python -V
-# exit the environment
-pyenv deactivate
+```properties
+# PYENV
+set -x PYENV_VIRTUALENV_DISABLE_PROMPT 1
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+status is-interactive; and pyenv init --path | source
+status --is-interactive; and pyenv virtualenv-init - | source
 ```

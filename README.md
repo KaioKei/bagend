@@ -16,11 +16,14 @@ Install requirements and follow the instructions !
 
 ## INSTALL
 
+In this order :
+
 * [Git](git/README.md)
+* GCC C compiler
+* [Pyenv](pyenv/README.md)
 * [Fish](fish/README.md)
 * [Neovim](neovim/README.md)
 * [Tmux](tmux/README.md)
-* [Pyenv](pyenv/README.md)
 
   
 ## OTHERS
